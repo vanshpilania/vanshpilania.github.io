@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         greeting = "Good evening!";
     }
-    
-    document.querySelector('header h1').textContent = greeting + " Welcome to My Website";
+
+    document.querySelectorAll('header h1').forEach(function(header) {
+        header.innerHTML = `<span class="greeting">${greeting}</span> Welcome to My Website`;
+    });
 });
